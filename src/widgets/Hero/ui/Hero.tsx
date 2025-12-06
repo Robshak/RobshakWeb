@@ -1,7 +1,11 @@
 import { motion } from 'motion/react';
 import { type FC, useCallback, useEffect, useState } from 'react';
+import strokeOfPaint from 'shared/images/strokeOfPaint.png';
+import { useLoaderStore } from 'shared/store';
 
 import { HandWrittenText } from './HandWrittenInscription';
+
+
 import s from './Hero.module.scss';
 import { HeroAvatar } from './HeroAvatar';
 import { InfoBlocks } from './InfoBlocks';
@@ -13,7 +17,9 @@ const STEPS = 5;
 const HERO_ANIMATION_KEY = 'heroAnimationPlayed';
 
 export const Hero: FC = () => {
+  const isLoading = useLoaderStore((state) => state.isLoading);
   const [hasPlayedOnce] = useState<boolean>(() => {
+
     if (typeof window === 'undefined') return false;
 
     try {
@@ -29,7 +35,7 @@ export const Hero: FC = () => {
   const [isAnimationComplete, setIsAnimationComplete] = useState<boolean>(!shouldAnimate);
 
   const onComplete = useCallback(() => {
-    if (!shouldAnimate) return;
+    if (!shouldAnimate || isLoading) return;
 
     setTimeout(() => {
       setCurrentState((prev) => {
@@ -46,7 +52,7 @@ export const Hero: FC = () => {
         return Math.min(prev + 1, STEPS - 1);
       });
     }, 200);
-  }, [shouldAnimate]);
+  }, [shouldAnimate, isLoading]);
 
   useEffect(() => {
     if (!shouldAnimate) return;
@@ -68,11 +74,19 @@ export const Hero: FC = () => {
 
   const content = (
     <>
+      <img src={strokeOfPaint} alt="" style={{ display: 'none' }} />
       {currentState >= 0 && (
-        <HeroAvatar onComplete={onComplete} className={s.heroAvatar} isAnimate={shouldAnimate} />
+        <HeroAvatar
+
+          onComplete={onComplete}
+          className={s.heroAvatar}
+          isAnimate={shouldAnimate}
+          isLoading={isLoading}
+        />
       )}
 
       {currentState >= 1 && (
+
         <div className={s.handWrittenBlock}>
           <HandWrittenText
             height={100}

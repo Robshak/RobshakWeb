@@ -12,18 +12,13 @@ type TStrokeOfPaint = TAnimatedStep & {
 
 export const StrokeOfPaint: FC<TStrokeOfPaint> = (props) => {
   const { className, onComplete, isAnimate } = props;
-  const [isLoaded, setIsLoaded] = useState(false);
 
   const duration = isAnimate ? 0.3 : 0;
 
   return (
     <motion.div
       initial={{ clipPath: 'inset(0 100% 0 0)', scale: 1.03, opacity: 0, rotate: -1 }}
-      animate={
-        isLoaded
-          ? { clipPath: 'inset(0 0 0 0)', scale: 1, opacity: 1, rotate: 0 }
-          : { clipPath: 'inset(0 100% 0 0)', scale: 1.03, opacity: 0, rotate: -1 }
-      }
+      animate={{ clipPath: 'inset(0 0 0 0)', scale: 1, opacity: 1, rotate: 0 }}
       transition={{
         duration: duration,
         ease: [0.12, 0.87, 0.19, 0.97],
@@ -31,14 +26,8 @@ export const StrokeOfPaint: FC<TStrokeOfPaint> = (props) => {
       onAnimationComplete={onComplete}
       className={clsx(s.container, className)}
     >
-      <img
-        className={s.img}
-        src={strokeOfPaint}
-        alt="brush stroke"
-        onLoad={() => {
-          setIsLoaded(true);
-        }}
-      />
+      <img className={s.img} src={strokeOfPaint} alt="brush stroke" />
     </motion.div>
   );
 };
+

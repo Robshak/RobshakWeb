@@ -8,7 +8,7 @@ import s from './HeroFvatar.module.scss';
 import type { TAnimatedStep } from '../../model';
 
 export const HeroAvatar: FC<TAnimatedStep> = (props) => {
-  const { className, onComplete, isAnimate } = props;
+  const { className, onComplete, isAnimate, isLoading } = props;
 
   const faceAnimateProps: Omit<HTMLMotionProps<'img'>, 'ref'> = {
     transition: {
@@ -17,13 +17,15 @@ export const HeroAvatar: FC<TAnimatedStep> = (props) => {
     },
   };
 
+  const shouldPlay = !isLoading;
+
   return (
     <motion.div
       initial={{
         opacity: 0,
       }}
       animate={{
-        opacity: 1,
+        opacity: shouldPlay ? 1 : 0,
       }}
       transition={{
         ...faceAnimateProps.transition,
@@ -36,7 +38,7 @@ export const HeroAvatar: FC<TAnimatedStep> = (props) => {
           x: '-200vw',
         }}
         animate={{
-          x: '0px',
+          x: shouldPlay ? '0px' : '-200vw',
         }}
         transition={faceAnimateProps.transition}
         src={faceLeftPart}
@@ -48,7 +50,7 @@ export const HeroAvatar: FC<TAnimatedStep> = (props) => {
           x: '+200vw',
         }}
         animate={{
-          x: '0px',
+          x: shouldPlay ? '0px' : '+200vw',
         }}
         transition={faceAnimateProps.transition}
         src={faceRightPart}
@@ -57,3 +59,4 @@ export const HeroAvatar: FC<TAnimatedStep> = (props) => {
     </motion.div>
   );
 };
+
