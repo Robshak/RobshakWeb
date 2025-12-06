@@ -59,4 +59,3 @@ export const HeroAvatar: FC<TAnimatedStep> = (props) => {
     </motion.div>
   );
 };
-

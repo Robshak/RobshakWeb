@@ -4,8 +4,6 @@ import strokeOfPaint from 'shared/images/strokeOfPaint.png';
 import { useLoaderStore } from 'shared/store';
 
 import { HandWrittenText } from './HandWrittenInscription';
-
-
 import s from './Hero.module.scss';
 import { HeroAvatar } from './HeroAvatar';
 import { InfoBlocks } from './InfoBlocks';
@@ -19,7 +17,6 @@ const HERO_ANIMATION_KEY = 'heroAnimationPlayed';
 export const Hero: FC = () => {
   const isLoading = useLoaderStore((state) => state.isLoading);
   const [hasPlayedOnce] = useState<boolean>(() => {
-
     if (typeof window === 'undefined') return false;
 
     try {
@@ -77,7 +74,6 @@ export const Hero: FC = () => {
       <img src={strokeOfPaint} alt="" style={{ display: 'none' }} />
       {currentState >= 0 && (
         <HeroAvatar
-
           onComplete={onComplete}
           className={s.heroAvatar}
           isAnimate={shouldAnimate}
@@ -86,7 +82,6 @@ export const Hero: FC = () => {
       )}
 
       {currentState >= 1 && (
-
         <div className={s.handWrittenBlock}>
           <HandWrittenText
             height={100}

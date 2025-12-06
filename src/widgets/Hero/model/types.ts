@@ -4,4 +4,3 @@ export type TAnimatedStep = {
   className?: string;
   isLoading?: boolean;
 };
-

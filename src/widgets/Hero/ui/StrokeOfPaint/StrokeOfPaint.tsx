@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { motion } from 'motion/react';
-import { type FC, useState } from 'react';
+import { type FC } from 'react';
 import strokeOfPaint from 'shared/images/strokeOfPaint.png';
 import type { TAnimatedStep } from 'widgets/Hero/model';
 
@@ -30,4 +30,3 @@ export const StrokeOfPaint: FC<TStrokeOfPaint> = (props) => {
     </motion.div>
   );
 };
-
