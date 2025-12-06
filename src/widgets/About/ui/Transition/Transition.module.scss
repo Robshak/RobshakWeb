@@ -1,0 +1,62 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  padding-bottom: 20px;
+  background-image: linear-gradient(
+                  176.5deg,
+                  #fff 0%,
+                  #fff 25%,
+                  #141a1c 25.5%,
+                  #141a1c 100%
+  );
+
+  @include respond-to(tablet-sm) {
+    background-image: linear-gradient(
+                    174deg,
+                    #fff 0%,
+                    #fff 25%,
+                    #141a1c 25.5%,
+                    #141a1c 100%
+    );
+  }
+
+  @include respond-to(phone) {
+    background-image: linear-gradient(
+                    170deg,
+                    #fff 0%,
+                    #fff 25%,
+                    #141a1c 25.5%,
+                    #141a1c 100%
+    );
+  }
+}
+
+.block {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  max-width: 1400px;
+  margin: 0 clamp(40px, (100vw - 1400px) / 2, 100vw);
+  padding: 30px;
+  align-items: flex-start;
+  gap: 30px;
+
+  background: #fff;
+  border-radius: 25px;
+
+  .avatar {
+    width: 75px;
+
+    @include respond-to(phone)  {
+      width: 60px;
+    }
+  }
+
+  @include respond-to(phone)  {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

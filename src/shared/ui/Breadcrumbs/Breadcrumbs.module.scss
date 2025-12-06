@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  padding-bottom: 40px;
+  align-items: center;
+  gap: 10px;
+
+  @include respond-to("desktop") {
+    gap: 5px;
+  }
+}
+
+.link-back {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  
+  .icon {
+    width: 64px;
+    height: 64px;
+    margin-top: -3px;
+    transition: all 0.3s;
+    fill: var(--color-text-primary);
+
+    @include respond-to("desktop") {
+      width: 48px;
+      height: 48px;
+    }
+
+    @include respond-to("tablet") {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include respond-to("phone-sm") {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &:hover {
+    .icon {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.item {
+    text-decoration: none;
+    color: inherit;
+    
+    &.link {
+        &:hover {
+            text-decoration: underline;
+            opacity: 80%;
+        }
+    }
+}
+
+.separator {
+    margin: 0 4px;
+    opacity: 50%;
+}
+
+.text {
+  @include respond-to("phone") {
+    font-size: 24px;
+  }
+
+  @include respond-to("phone-sm") {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,26 @@
+.images {
+  display: flex;
+
+  img {
+    display: block;
+
+    @include respond-to(desktop-xl) {
+      width: 400px;
+    }
+    @include respond-to(desktop) {
+      width: 300px;
+    }
+    @include respond-to(tablet) {
+      width: 200px;
+    }
+    @include respond-to(tablet-sm) {
+      width: 200px;
+    }
+    @include respond-to(phone) {
+      width: 150px;
+    }
+    @include respond-to(phone-sm) {
+      width: 100px;
+    }
+  }
+}

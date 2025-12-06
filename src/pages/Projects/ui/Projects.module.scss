@@ -1,0 +1,37 @@
+.container {
+  padding: 40px 40px 0;
+
+  @include respond-to("tablet-sm") {
+    padding: 30px 30px 0;
+  }
+
+  @include respond-to("phone") {
+    padding: 20px 20px 0;
+  }
+
+  @include respond-to("phone-sm") {
+    padding: 10px 10px 0;
+  }
+}
+
+
+.projects {
+  display: grid;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+
+  @include respond-to("desktop") {
+    gap: 40px;
+  }
+
+  @include respond-to("tablet") {
+    grid-template-columns: 1fr;
+  }
+
+  @include respond-to("tablet-sm") {
+    gap: 20px;
+  }
+}

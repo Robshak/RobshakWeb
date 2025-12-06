@@ -1,0 +1,235 @@
+:root {
+  --text-main-display: #111;
+  --text-main-header: #222;
+  --text-main-body: #333;
+  --text-muted: #a0a0a0;
+  --text-inverse: #fff;
+}
+
+.typography {
+  margin: 0;
+  color: var(--text-main);
+
+  &-display1 {
+    font-family: Bitter, sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--text-main-display);
+
+    @include respond-to(desktop-xl) { font-size: 72px; }
+    @include respond-to(desktop) { font-size: 58px; }
+    @include respond-to(tablet) { font-size: 48px; }
+    @include respond-to(tablet-sm) { font-size: 40px; }
+    @include respond-to(phone) { font-size: 32px; }
+    @include respond-to(phone-sm) { font-size: 28px; }
+  }
+
+  &-display2 {
+    font-family: Bitter, sans-serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--text-main-display);
+    @include respond-to(desktop-xl) { font-size: 40px; }
+    @include respond-to(desktop) { font-size: 36px; }
+    @include respond-to(tablet) { font-size: 32px; }
+    @include respond-to(tablet-sm) { font-size: 28px; }
+    @include respond-to(phone) { font-size: 26px; }
+    @include respond-to(phone-sm) { font-size: 24px; }
+  }
+
+  &-header1 {
+    font-family: Inter, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-main-header);
+    @include respond-to(desktop-xl) { font-size: 26px; }
+    @include respond-to(desktop) { font-size: 24px; }
+    @include respond-to(tablet) { font-size: 22px; }
+    @include respond-to(tablet-sm) { font-size: 20px; }
+    @include respond-to(phone) { font-size: 17px; }
+    @include respond-to(phone-sm) { font-size: 16px; }
+  }
+
+  &-header2 {
+    font-family: Inter, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text-main-header);
+    @include respond-to(desktop-xl) { font-size: 21px; }
+    @include respond-to(desktop) { font-size: 20px; }
+    @include respond-to(tablet) { font-size: 19px; }
+    @include respond-to(tablet-sm) { font-size: 18px; }
+    @include respond-to(phone) { font-size: 17px; }
+    @include respond-to(phone-sm) { font-size: 16px; }
+  }
+
+  &-header3 {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text-main-header);
+    @include respond-to(desktop-xl) { font-size: 19px; }
+    @include respond-to(desktop) { font-size: 18px; }
+    @include respond-to(tablet) { font-size: 17px; }
+    @include respond-to(tablet-sm) { font-size: 16px; }
+    @include respond-to(phone) { font-size: 15px; }
+    @include respond-to(phone-sm) { font-size: 14px; }
+  }
+
+  &-body {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-main-body);
+    @include respond-to(desktop-xl) { font-size: 16px; }
+    @include respond-to(desktop) { font-size: 16px; }
+    @include respond-to(tablet) { font-size: 15px; }
+    @include respond-to(tablet-sm) { font-size: 15px; }
+    @include respond-to(phone) { font-size: 14px; }
+    @include respond-to(phone-sm) { font-size: 14px; }
+  }
+
+  &-body-small {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-main-body);
+    @include respond-to(desktop-xl) { font-size: 14px; }
+    @include respond-to(desktop) { font-size: 13px; }
+    @include respond-to(tablet) { font-size: 12px; }
+    @include respond-to(tablet-sm) { font-size: 12px; }
+    @include respond-to(phone) { font-size: 11px; }
+    @include respond-to(phone-sm) { font-size: 10px; }
+  }
+
+  &-overline {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    @include respond-to(desktop-xl) { font-size: 13px; }
+    @include respond-to(desktop) { font-size: 13px; }
+    @include respond-to(tablet) { font-size: 12px; }
+    @include respond-to(tablet-sm) { font-size: 12px; }
+    @include respond-to(phone) { font-size: 11px; }
+    @include respond-to(phone-sm) { font-size: 10px; }
+  }
+
+  &-tag {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    @include respond-to(desktop-xl) {
+      font-size: 14px;
+    }
+    @include respond-to(desktop) {
+      font-size: 13px;
+    }
+    @include respond-to(tablet) {
+      font-size: 12px;
+    }
+    @include respond-to(tablet-sm) {
+      font-size: 11px;
+    }
+    @include respond-to(phone) {
+      font-size: 10px;
+    }
+    @include respond-to(phone-sm) {
+      font-size: 9px;
+    }
+  }
+
+  &-align-left {
+    text-align: left;
+  }
+
+  &-align-center {
+    text-align: center;
+  }
+
+  &-align-right {
+    text-align: right;
+  }
+
+  &-align-offset {
+    padding-left: 3rem;
+    text-align: left;
+  }
+
+  &-weight-light {
+    font-weight: 300;
+  }
+
+  &-weight-regular {
+    font-weight: 400;
+  }
+
+  &-weight-medium {
+    font-weight: 500;
+  }
+
+  &-weight-semibold {
+    font-weight: 600;
+  }
+
+  &-weight-bold {
+    font-weight: 700;
+  }
+
+  &-caps {
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  &-muted {
+    color: var(--text-muted);
+  }
+
+  &-inverse {
+    color: var(--text-inverse);
+  }
+
+  &-italic {
+    font-style: italic;
+  }
+
+  &-handwritten {
+    font-family: Alkatra, sans-serif;
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  &-withLines {
+    position: relative;
+    display: inline-block;
+
+    /* stylelint-disable-next-line selector-class-pattern */
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background-color: currentColor;
+      opacity: 35%;
+      content: "";
+    }
+
+    /* stylelint-disable-next-line selector-class-pattern */
+    &-text {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      background-color: var(--typography-with-lines-bg, #fff);
+      transition: background-color 0.3s;
+    }
+  }
+}

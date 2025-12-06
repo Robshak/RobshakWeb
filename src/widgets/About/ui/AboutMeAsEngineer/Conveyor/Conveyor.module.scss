@@ -1,0 +1,43 @@
+.multiple-content-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.conveyor-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.conveyor-track {
+  display: flex;
+  width: 100%;
+  gap: 60px;
+}
+
+.conveyor-item {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.internal-pagination {
+  display: flex;
+  margin-top: auto;
+  gap: 10px;
+
+  .arrow {
+    width: 32px;
+    height: 32px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &.disabled {
+      opacity: 30%;
+      filter: opacity(80%);
+      pointer-events: none;
+    }
+  }
+}

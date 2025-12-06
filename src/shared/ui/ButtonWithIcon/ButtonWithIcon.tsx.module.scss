@@ -1,0 +1,22 @@
+.button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  transition: all 0.1s;
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.1;
+  }
+
+  &:active {
+    scale: 0.95;
+  }
+
+  svg {
+    width: 32px;
+  height: 32px;
+  }
+}

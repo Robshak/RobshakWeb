@@ -1,0 +1,232 @@
+.container {
+  position: relative;
+  display: flex;
+  width: 500px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transform-origin: center;
+
+  @include respond-to(desktop) {
+    width: 400px;
+    height: 400px;
+  }
+
+  @include respond-to(phone) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.img {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  width: 500px;
+  border: 4px solid #fafafa;
+  border-radius: 50%;
+
+  box-shadow: inset 32px 32px 64px rgb(255 255 255 / 30%);
+
+  filter: invert(0.15);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(2px);
+    pointer-events: none;
+  }
+
+  @include respond-to(desktop) {
+    width: 400px;
+    height: 400px;
+  }
+
+  @include respond-to(phone) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.outer-line-first {
+  z-index: 1;
+  display: flex;
+  width: 450px;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid rgb(17 17 17 / 25%);
+  border-radius: 50%;
+
+  @include respond-to(desktop) {
+    width: 370px;
+    height: 370px;
+  }
+
+  @include respond-to(phone) {
+    width: 280px;
+    height: 280px;
+    border: none;
+  }
+}
+
+.outer-line-second {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid rgb(17 17 17 / 25%);
+  border-radius: 50%;
+
+  @include respond-to(desktop) {
+    width: 340px;
+    height: 340px;
+  }
+
+  @include respond-to(phone) {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+
+.outer-line-third {
+  display: flex;
+  width: 250px;
+  height: 250px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid rgb(17 17 17 / 25%);
+  border-radius: 50%;
+
+  @include respond-to(desktop) {
+    width: 230px;
+    height: 230px;
+  }
+
+  @include respond-to(phone) {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.inner-cycle {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  background-color: #1ed760;
+  border-radius: 50%;
+  box-shadow: inset 32px 32px 64px rgb(0 0 0 / 30%);
+
+  @include respond-to(desktop) {
+    width: 180px;
+    height: 180px;
+  }
+
+  @include respond-to(phone) {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+.inner-line {
+  position: relative;
+  display: block;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
+  border: 1px solid rgb(17 17 17 / 100%);
+  border-radius: 50%;
+
+  @include respond-to(desktop) {
+    width: 170px;
+    height: 170px;
+  }
+
+  @include respond-to(phone) {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.inner-point {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(17 17 17 / 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+
+  @include respond-to(desktop) {
+    width: 8px;
+    height: 8px;
+  }
+
+  @include respond-to(phone) {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+.text {
+  position: absolute;
+  top: calc(50% + 5px);
+  left: calc(50% + 15px);
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+
+  * {
+    font-size: 8px;
+    line-height: 1.1;
+  }
+
+  @include respond-to(desktop) {
+    top: calc(50% + 5px);
+    left: calc(50% + 10px);
+  }
+
+  @include respond-to(phone) {
+    top: calc(50% + 5px);
+    left: calc(50% + 5px);
+
+    * {
+      font-size: 7px;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+
+  .plate {
+    position: absolute;
+    inset: 0;
+  }
+
+  @include respond-to(desktop) {
+    width: 400px;
+    height: 400px;
+  }
+
+  @include respond-to(phone) {
+    width: 300px;
+    height: 300px;
+  }
+}

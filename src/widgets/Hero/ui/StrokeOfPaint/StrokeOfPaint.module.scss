@@ -1,0 +1,27 @@
+.container {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.img {
+  width: 500px;
+
+  @include respond-to(desktop-xl) {
+    width: 400px;
+  }
+  @include respond-to(desktop) {
+    width: 400px;
+  }
+  @include respond-to(tablet) {
+    width: 350px;
+  }
+  @include respond-to(tablet-sm) {
+    width: 350px;
+  }
+  @include respond-to(phone) {
+    width: 300px;
+  }
+  @include respond-to(phone-sm) {
+    width: 250px;
+  }
+}

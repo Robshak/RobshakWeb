@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+}
+
+.with-padding {
+  max-width: 1400px;
+  margin: auto;
+
+  padding: 0 40px;
+
+  @include respond-to(desktop) {
+    padding: 0 30px;
+  }
+}
+
+.with-margin{
+  margin-bottom: 200px;
+}
+
+.title {
+  padding-bottom: 40px;
+}

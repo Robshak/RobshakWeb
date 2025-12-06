@@ -1,0 +1,51 @@
+.container {
+  display: block;
+  width: 500px;
+
+  @include respond-to(desktop-xl) {
+    width: 400px;
+  }
+  @include respond-to(desktop) {
+    width: 400px;
+  }
+  @include respond-to(tablet) {
+    width: 350px;
+  }
+  @include respond-to(tablet-sm) {
+    width: 350px;
+  }
+  @include respond-to(phone) {
+    width: 300px;
+  }
+  @include respond-to(phone-sm) {
+    width: 250px;
+  }
+}
+
+.path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  opacity: 0%;
+
+  animation-name: draw;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.path.ready {
+  opacity: 100%;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: var(--path-length);
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}

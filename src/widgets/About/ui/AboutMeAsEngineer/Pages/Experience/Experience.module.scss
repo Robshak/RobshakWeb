@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  margin-bottom: 12px;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  align-self: center;
+  background-color: var(--text-main-body);
+  opacity: 60%;
+}
+
+.list {
+  margin: 0;
+  padding-left: 20px;
+
+  li {
+    margin-bottom: 8px;
+  }
+}
+
+.sublist {
+  margin-top: 6px;
+  padding-left: 20px;
+
+  li {
+    list-style: disc;
+  }
+}
+
+.highlight {
+  font-weight: 600;
+}

@@ -1,0 +1,51 @@
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  padding: 40px 20px 80px;
+  justify-content: center;
+  background:
+          radial-gradient(
+                          ellipse 60% 100% at 50% 0%,
+                          rgb(0 0 0 / 60%) 0%,
+                          rgb(0 0 0 / 30%) 60%,
+                          rgb(0 0 0 / 0%) 100%
+          ),
+          linear-gradient(
+                          180deg,
+                          rgb(0 0 0 / 30%) 0%,
+                          rgb(0 0 0 / 10%) 60%,
+                          transparent 100%
+          );
+  pointer-events: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.text {
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 50%);
+}
+
+.arrow {
+  width: 60px;
+  height: 40px;
+  color: #fff;
+  filter: drop-shadow(0 2px 4px rgb(0 0 0 / 50%));
+}
+
+.arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

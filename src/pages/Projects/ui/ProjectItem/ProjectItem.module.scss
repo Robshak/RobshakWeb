@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  min-height: 360px;
+  padding: 10px;
+  flex-direction: column;
+  gap: 20px;
+  text-decoration: none !important;
+  border-radius: 10px;
+  
+
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    --typography-with-lines-bg: #e0e0e0;
+
+    background-color: #e0e0e0;
+
+    .image {
+      transform: translateX(10px);
+    }
+
+    .header,
+    .description {
+      transform: translateX(-10px);
+    }
+  }
+
+  @include respond-to("tablet-sm") {
+    min-height: 340px;
+  }
+}
+
+.header,
+.image,
+.description {
+  width: 60%;
+  transition: all 0.3s;
+
+  @include respond-to("tablet-sm") {
+    width: 70%;
+  }
+
+  @include respond-to("phone") {
+    width: 80%;
+  }
+}
+
+.image {
+  align-self: end;
+}

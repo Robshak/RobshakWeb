@@ -1,0 +1,10 @@
+.volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.volume-bar {
+  min-width: 80px;
+  margin-top: -2px;
+}

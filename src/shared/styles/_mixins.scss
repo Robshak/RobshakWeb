@@ -1,0 +1,17 @@
+@use "variables" as *;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == phone-sm {
+    @media (max-width: $phone-sm) { @content; }
+  } @else if $breakpoint == phone {
+    @media (max-width: $phone) { @content; }
+  } @else if $breakpoint == tablet-sm {
+    @media (max-width: $tablet-sm) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $tablet) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (max-width: $desktop) { @content; }
+  } @else if $breakpoint == desktop-xl {
+    @media (max-width: $desktop-xl) { @content; }
+  }
+}

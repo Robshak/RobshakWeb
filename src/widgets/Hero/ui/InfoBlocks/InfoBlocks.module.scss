@@ -1,0 +1,88 @@
+.card-hello {
+  display: grid;
+  grid-template-areas:
+    "emoji hello"
+    "emoji robert";
+
+  max-width: 400px;
+
+  .emoji {
+    grid-area: emoji;
+  }
+
+  .hello {
+    grid-area: hello;
+  }
+
+  .robert {
+    grid-area: robert;
+  }
+
+  @include respond-to(desktop-xl) { max-width: 400px; }
+  @include respond-to(desktop) { max-width: 350px; }
+  @include respond-to(tablet) { max-width: 300px; }
+  @include respond-to(tablet-sm) { max-width: 250px; }
+  @include respond-to(phone) { max-width: 200px; }
+  @include respond-to(phone-sm) { max-width: 180px; }
+}
+
+
+.card-tags {
+  max-width: 350px;
+  margin-top: 60px;
+  margin-left: 130px;
+
+  .card-tags-title {
+    margin-bottom: 10px;
+  }
+
+  .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  @include respond-to(desktop-xl) {
+    max-width: 350px;
+    margin-top: 50px;
+    margin-left: 120px;
+  }
+  @include respond-to(desktop) {
+    max-width: 300px;
+    margin-top: 40px;
+    margin-left: 110px;
+  }
+  @include respond-to(tablet) {
+    max-width: 260px;
+    margin-top: 30px;
+    margin-left: 90px;
+
+    .card-tags-title { margin-bottom: 8px; }
+    .tag-container { gap: 8px; }
+  }
+  @include respond-to(tablet-sm) {
+    max-width: 220px;
+    margin-top: 20px;
+    margin-left: 75px;
+
+    .card-tags-title { margin-bottom: 7px; }
+    .tag-container { gap: 6px; }
+  }
+  @include respond-to(phone) {
+    max-width: 190px;
+    margin-top: 15px;
+    margin-left: 60px;
+
+    .card-tags-title { margin-bottom: 6px; }
+    .tag-container { gap: 6px; }
+  }
+  @include respond-to(phone-sm) {
+    max-width: 180px;
+    margin-top: 10px;
+    margin-left: 55px;
+
+    .card-tags-title { margin-bottom: 5px; }
+    .tag-container { gap: 5px; }
+  }
+}
+
