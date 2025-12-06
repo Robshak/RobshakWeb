@@ -2,6 +2,8 @@
 
 My personal website — a space for self-expression and leveling up my animation skills with Framer Motion.
 
+👉 [Посмотреть демо](https://robshak.com)
+
 ## 🛠 Tech Stack
 
 This project is built with a modern frontend stack:
