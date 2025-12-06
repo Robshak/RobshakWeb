@@ -34,7 +34,7 @@ export const MyProjects: TProject[] = [
     stack: ['React 19 + TypeScript', 'Zustand', 'SCSS', 'Framer Motion', 'Vite'],
     imageForItem: MyWebsiteImageForItem,
     imageForPage: MyWebsiteImageForPage,
-    githubUrl: 'https://github.com/Robshak/Taglist-Remake',
-    demoUrl: 'https://taglist-remake.vercel.app/',
+    githubUrl: 'https://github.com/Robshak/RobshakWeb',
+    demoUrl: '/',
   },
 ];

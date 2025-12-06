@@ -1,10 +1,10 @@
 import clsx from 'clsx';
+import { MyProjects } from 'entities/project';
 import type { FC } from 'react';
 import { Breadcrumbs } from 'shared/ui';
 
-import s from './Projects.module.scss';
-import { MyProjects } from '../model';
 import { ProjectItem } from './ProjectItem';
+import s from './Projects.module.scss';
 
 type TProjectsProps = {
   className?: string;

@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# Robshak Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal website — a space for self-expression and leveling up my animation skills with Framer Motion.
 
-Currently, two official plugins are available:
+## 🛠 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is built with a modern frontend stack:
 
-## React Compiler
+- **Core**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Routing**: [React Router 7](https://reactrouter.com/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Styling**: [SCSS Modules](https://sass-lang.com/), [clsx](https://github.com/lukeed/clsx)
+- **Animations**: [Motion](https://motion.dev/)
+- **Linting & Formatting**: ESLint, Stylelint, Prettier
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 📂 Project Structure
 
-## Expanding the ESLint configuration
+The project follows the **Feature-Sliced Design (FSD)** methodology:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── app/          # App entry point, providers, global styles
+├── pages/        # Page components (Main, Projects, ProjectPage)
+├── widgets/      # Complex UI blocks (Hero, About, Footer)
+├── entities/     # Business entities (Project, etc.)
+├── shared/       # Shared UI kit, hooks, utils
+└── public/       # Static assets
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🏁 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (Latest LTS recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Robshak/RobshakWeb.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd robshak-web
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Development Server
+
+Start the local development server:
+
+```bash
+npm run dev
 ```
+
+The application will be available at `http://localhost:5173`.
+
+## 📜 Scripts
+
+- `npm run dev`: Starts the development server.
+- `npm run build`: Type-checks and builds the project for production.
+- `npm run preview`: Previews the production build locally.
+- `npm run typecheck`: Runs TypeScript type checking.
+- `npm run eslint`: Lints JavaScript/TypeScript files.
+- `npm run stylelint`: Lints SCSS/CSS files.
+- `npm run validate`: Runs typecheck, eslint, and stylelint.
+
+## 📄 License
+
+This project is for personal use and demonstration purposes.

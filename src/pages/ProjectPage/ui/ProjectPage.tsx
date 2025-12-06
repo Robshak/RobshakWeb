@@ -1,4 +1,4 @@
-import { MyProjects } from 'pages/Projects/model';
+import { MyProjects } from 'entities/project';
 import type { FC } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import GithubIcon from 'shared/icons/GithubIcon.svg?react';

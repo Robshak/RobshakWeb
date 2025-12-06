@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { TProject } from 'pages/Projects/model';
+import type { TProject } from 'entities/project';
 import type { FC } from 'react';
 import { Link, Text } from 'shared/ui';
 
