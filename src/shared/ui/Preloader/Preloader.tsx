@@ -12,7 +12,7 @@ export const Preloader = () => {
       setIsHidden(true);
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, 300);
     };
 
     if (document.readyState === 'complete') {
@@ -25,7 +25,7 @@ export const Preloader = () => {
 
   return (
     <div className={`${s.preloader} ${isHidden ? s.hidden : ''}`}>
-      <div className={s.spinner} />
+      <img src="/Logo.svg" alt="Logo" className={s.logo} />
     </div>
   );
 };
