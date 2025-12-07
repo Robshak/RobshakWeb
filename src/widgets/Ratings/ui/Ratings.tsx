@@ -1,11 +1,10 @@
 import clsx from 'clsx';
 import type { FC, CSSProperties } from 'react';
 import { usePlatform, PlatformType } from 'shared/hooks';
-import { Text, Link } from 'shared/ui';
+import { Text, Link, Note } from 'shared/ui';
 
 import { ratingItems } from '../model';
 import MapIcon from './Map.svg?react';
-import NoteIcon from './Note.svg?react';
 import PhotoIcon from './Photo.svg?react';
 import s from './Ratings.module.scss';
 
@@ -60,7 +59,7 @@ export const Ratings: FC<TRatingsProps> = (props) => {
   const renderDecoration = (id: string) => {
     switch (id) {
       case 'note':
-        return <NoteIcon className={s.decorationIcon} />;
+        return <Note className={s.decorationIcon} />;
       case 'photo':
         return <PhotoIcon className={s.decorationIcon} />;
       case 'map':
