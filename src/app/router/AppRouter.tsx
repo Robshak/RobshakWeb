@@ -3,6 +3,7 @@ import { Main, ProjectPage, Projects } from 'pages';
 import type { FC } from 'react';
 import { RouterProvider } from 'react-router/dom';
 import { createBrowserRouter, Outlet, useLocation } from 'react-router-dom';
+import { useStaticVh } from 'shared/hooks';
 
 const AnimatedLayout = () => {
   const location = useLocation();
@@ -43,5 +44,7 @@ const router = createBrowserRouter([
 ]);
 
 export const AppProvider: FC = () => {
+  useStaticVh();
+
   return <RouterProvider router={router} />;
 };

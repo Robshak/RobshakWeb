@@ -120,6 +120,7 @@
   transform-origin: var(--pin-x) var(--pin-y);
 
   transform: translate(calc(-1 * var(--pin-x)), calc(-1 * var(--pin-y))) rotate(var(--rotation));
+  will-change: transform;
 }
 
 .sticker-body {

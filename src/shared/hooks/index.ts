@@ -5,3 +5,4 @@ export {
   useIsTabletSmall,
   PlatformType,
 } from './usePlatform';
+export { useStaticVh } from './useStaticVh';
