@@ -2,7 +2,7 @@
 
 My personal website — a space for self-expression and leveling up my animation skills with Framer Motion.
 
-👉 [Посмотреть демо](https://robshak.com)
+👉 [Watch demo](https://robshak.com)
 
 ## 🛠 Tech Stack
 
