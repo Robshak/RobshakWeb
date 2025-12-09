@@ -1,13 +1,11 @@
 import type { ReactNode } from 'react';
 import AboutMeEducation from 'shared/images/aboutMeEducation.png';
 import AboutMeExperience from 'shared/images/aboutMeExperience.png';
-import AboutMeIdeas from 'shared/images/aboutMeIdeas.png';
 import AboutMeSkills from 'shared/images/aboutMeSkills.png';
 import AboutMeSummary from 'shared/images/aboutMeSummary.png';
 
 import { Education } from './Education';
 import { Experience2025 } from './Experience';
-import { Ideas } from './Ideas';
 import { Skills } from './Skills';
 import { Summary } from './Summary';
 
@@ -54,10 +52,10 @@ export const ABOUT_ME_AS_ENGINEER: TPage[] = [
     content: <Education />,
     img: <img src={AboutMeEducation} alt={'AboutMeEducation'} />,
   },
-  {
-    name: 'Ideas in motion',
-    pageType: 'single',
-    content: <Ideas />,
-    img: <img src={AboutMeIdeas} alt={'AboutMeIdeas'} />,
-  },
+  // {
+  //   name: 'Ideas in motion',
+  //   pageType: 'single',
+  //   content: <Ideas />,
+  //   img: <img src={AboutMeIdeas} alt={'AboutMeIdeas'} />,
+  // },
 ];

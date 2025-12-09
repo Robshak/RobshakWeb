@@ -1,0 +1,20 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+
+  text-decoration: none !important;
+  transition: all 0.3s;
+
+  .icon {
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    transform: translateX(2px);
+
+    .icon {
+      transform: translateX(2px);
+    }
+  }
+}

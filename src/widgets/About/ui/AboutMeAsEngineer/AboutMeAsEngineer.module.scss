@@ -70,11 +70,13 @@
     cursor: pointer;
 
     &:hover {
+      color: #333;
       opacity: 100%;
     }
   }
 
   .active-page {
+    color: #111;
     opacity: 100%;
   }
 
